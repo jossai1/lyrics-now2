@@ -1,0 +1,30 @@
+<h2>Lyric Finder</h2>
+    <div class="search" style="text-align: center;">
+    <input [(ngModel)]="searchText" placeholder="Track name *" required >
+
+
+    <input [(ngModel)]="searchArtistName" placeholder="Artist name"required >
+
+    <button class="grow" (click)="trackSearch(searchText, searchArtistName)"> SEARCH </button>
+
+    </div>
+  <!--  warning for empty fields <div class="alert alert-warning alert-dismissable fade in"  *ngIf="emptyField">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+  </div> -->
+    <br>
+    <!--<p> {{display}}</p> -->
+    <div class="row">
+      <!--without animation - the image is already in dom and when it is set the animation wont play so add in ngif so that the animation will play as soon as it is set  -->
+    <div *ngIf="imgUrl.length !== 0" class="col-md-6"> <img class="animated slideInLeft " style="border:1px solid #021a40" [src]="imgUrl"></div>
+
+
+    <!-- <p>{{trackName}}</p>
+    <p>{{artist}}</p>
+    <p>{{genre}}</p> -->
+    <div class="col-md-6">
+    <h2>{{trackName}}</h2>
+    <!--<hr style="background-color: #878787;width:100%">-->
+    <p  style="white-space: pre-wrap"> {{lyrics}}</p>
+    </div>
+    </div>
