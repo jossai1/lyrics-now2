@@ -5,8 +5,9 @@ const path = require('path');
 const app = express();
 
 /* START SERVE HTML FILE */
-app.use(express.static('./dist/lyrics-now'));
+app.use(express.static('./dist/'));
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, '/dist/lyrics-now/index.html'));
+  res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
+app.listen(process.env.PORT || 8080);
 /* END SERVE HTML FILE */
