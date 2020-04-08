@@ -20,7 +20,7 @@ interface LyricRes {
 
 /*musixmatch api response*/
 interface Message {
-  body: { lyrics: Lyrics }; // had to change it to any for it to work (b4 was Track)
+  body: { lyrics: Lyrics }; //had to change it to any for it to work (b4 was Track)
   header: Header;
 }
 
@@ -127,7 +127,7 @@ export class SearchComponent implements OnInit {
   */
   getLyrics(track_id: number) {
 
-    let lyricSearchUrl = 'https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=' + track_id + '&apikey=2fd5a6a61be57415701e38894f38114e&format=jsonp&callback=JSONP_CALLBACK';
+    let lyricSearchUrl = 'http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=' + track_id + '&apikey=2fd5a6a61be57415701e38894f38114e&format=jsonp&callback=JSONP_CALLBACK';
 
     this.generalSearch
       .getLyrics(lyricSearchUrl)
