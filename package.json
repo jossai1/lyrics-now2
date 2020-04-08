@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -45,5 +45,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
+  },
+  "engines": {
+  "node": "10.9.0",
+  "npm": "5.6.0"
   }
 }
